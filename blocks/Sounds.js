@@ -16,4 +16,3 @@ javascript.javascriptGenerator.forBlock['play_sound_block'] = function () {
     return `var audio = new Audio('${soundFile}'); audio.play();\n`;
 };
 
-
