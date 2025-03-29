@@ -4,11 +4,15 @@ PRIMITIVES["SoundUploader"] = {
     tags: {
         id: "sound_uploader",
         name: "Sound Uploader",
+        sound_name: "example.ogg",
+        sound: VALUE_ENUMS.FILE,
     },
     getDependencies: function () {
         return [];
     },
     asJavaScript: function (soundName, audioBase64) {
+        var soundname = this.tags.sound_name;
+        var audioBase64 = this.tags.sound;
         return `(function SoundUploaderDatablock() {
             ModAPI.addEventListener("lib:asyncsink", async () => {
                 const filePath = \`resourcepacks/AsyncSinkLib/assets/minecraft/sounds/\${soundName}.ogg\`;
