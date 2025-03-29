@@ -5,7 +5,7 @@ PRIMITIVES["SoundUploader"] = {
         id: "sound_uploader",
         name: "Sound Uploader",
         sound_name: "example.ogg",
-        sound: VALUE_ENUMS.FILE,
+        sound: VALUE_ENUMS.SOUND,
     },
     getDependencies: function () {
         return [];
