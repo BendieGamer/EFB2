@@ -65,7 +65,10 @@ function editObject(obj, datablock) {
         if (val === VALUE_ENUMS.FILE) {
             input.type = "file";
         }
-
+        if (val === VALUE_ENUMS.SOUND) {
+            input.type = "file";
+            input.accept = "image/ogg";
+        }
         if (val === VALUE_ENUMS.IMG) {
             input.type = "file";
             input.accept = "image/png";
