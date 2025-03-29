@@ -1,6 +1,6 @@
 const VALUE_ENUMS = {
     FILE: "efb::val__file",
-    FILE: "efb::val__ogg",
+    SOUND: "efb::val__ogg",
     IMG: "efb::val__img",
     ABSTRACT_HANDLER: "efb::handler/",
     ABSTRACT_ITEM: "efb::val__item",
