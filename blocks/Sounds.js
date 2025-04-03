@@ -13,7 +13,7 @@ const play_sound_block = {
 Blockly.common.defineBlocks({ play_sound_block: play_sound_block });
 
 javascript.javascriptGenerator.forBlock['play_sound_block'] = function (block) {
-  const soundFile = block.getFieldValue('SOUND');
+  const soundFile = block.getFieldValue('sound_name');
   const code = `ModAPI.util.str(`+ soundfile + `});`;
   return code;
 }
