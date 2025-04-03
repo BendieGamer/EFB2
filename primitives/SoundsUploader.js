@@ -1,6 +1,6 @@
-PRIMITIVES["SoundUploader"] = {
+PRIMITIVES["SoundsUploader"] = {
     name: "Sounds",
-    type: "SoundUploader",
+    type: "SoundsUploader",
     tags: {
         id: "sound_maker",
         name: "Sound",
