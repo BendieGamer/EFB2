@@ -1,5 +1,5 @@
 PRIMITIVES["SoundsUploader"] = {
-    name: "Sounds",
+    name: "SoundsUploader",
     type: "SoundsUploader",
     tags: {
         id: "sound_maker",
