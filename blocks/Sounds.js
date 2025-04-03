@@ -2,7 +2,7 @@ const play_sound_block = {
   init: function () {
     this.appendDummyInput()
       .appendField('play sound')
-      .appendField(new Blockly.FieldTextInput('sound.ogg'), 'SOUND');
+      .appendField(new Blockly.FieldTextInput('sound_name'), 'SOUND');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Plays a sound that you have uploaded');
@@ -14,6 +14,6 @@ Blockly.common.defineBlocks({ play_sound_block: play_sound_block });
 
 javascript.javascriptGenerator.forBlock['play_sound_block'] = function (block) {
   const soundFile = block.getFieldValue('SOUND');
-  const code = `ModAPI.util.str(soundfile);`;
+  const code = `ModAPI.util.str(${soundfile});`;
   return code;
 }
