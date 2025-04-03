@@ -10,7 +10,7 @@ PRIMITIVES["SoundUploader"] = {
     getDependencies: function () {
         return [];
     },
-    asJavaScript: function (soundName, audioBase64) {
+    asJavaScript: function () {
         var soundname = this.tags.sound_name;
         var audioBase64 = this.tags.sound;
         return `(function SoundUploaderDatablock() {
