@@ -113,7 +113,7 @@ function editObject(obj, datablock) {
             }
         }
 
-        if (typeof parentValue === "string" && ["efb::val__file", "efb::val__img"].includes(parentValue)) {
+        if (typeof parentValue === "string" && ["efb::val__file", "efb::val__img", "efb::val__sound":].includes(parentValue)) {
             var resetBtn = document.createElement("button");
             resetBtn.innerText = "Reset";
             resetBtn.addEventListener("click", ()=>{
