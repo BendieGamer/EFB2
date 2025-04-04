@@ -1,8 +1,7 @@
 const play_sound_block = {
   init: function () {
-    this.appendDummyInput()
-      .appendField('play sound')
-      .appendField(new Blockly.FieldTextInput('sound_name'), 'SOUND');
+    this.appendValueInput('SOUND')
+            .appendField('play sound');
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setTooltip('Plays a sound that you have uploaded');
