@@ -11,17 +11,15 @@ PRIMITIVES["SoundsUploader"] = {
         return [];
     },
     asJavaScript: function () {
-        var soundname = this.tags.sound_name;
-        var audioBase64 = this.tags.sound;
         return `(function SoundUploaderDatablock() {
             ModAPI.addEventListener("lib:asyncsink", async () => {
-                const filePath = "resourcepacks/AsyncSinkLib/assets/minecraft/sounds/${soundName}.ogg";
+                const filePath = "resourcepacks/AsyncSinkLib/assets/minecraft/sounds/${this.tags.sound_name}.ogg";
                 
-                AsyncSink.setFile(filePath, await (await fetch("data:audio/ogg;base64, ${audioBase64}")).arrayBuffer());
+                AsyncSink.setFile(filePath, await (await fetch("data:audio/ogg;base64, ${this.tags.sound}")).arrayBuffer());
                 
-                AsyncSink.Audio.register("/sounds/${soundName}, AsyncSink.Audio.Category.ANIMALS, [
+                AsyncSink.Audio.register("/sounds/${this.tags.sound_name}, AsyncSink.Audio.Category.ANIMALS, [
                     {
-                        path: "sounds/${soundName}.ogg",
+                        path: "sounds/${this.tags.sound_name}.ogg",
                         pitch: 1,
                         volume: 1,
                         streaming: false
